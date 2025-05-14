@@ -1,0 +1,167 @@
+---
+title: "![](img/egu25_logo.svg){width=300}"
+subtitle: "Uso eficiente del agua: de alertas de sequía a riegos de precisión mediante teledetección"
+author: Dr. Francisco Zambrano
+width: 1280
+height: 720
+bibliography: references.bib
+format: 
+    revealjs:
+      slide-number: true
+      transition: fade
+      title: "![Seminario-UMayor](img/HEMERA_UM_color.png){width=300}"
+      background-transition: fade
+      theme: [default, custom.scss]
+      logo: img/HEMERA_UM_color.png
+      footer: "ODES: [https://ODES-Chile.org/](https://ODES-Chile.org) & SatOri: [https://s4tori.cl](https://s4tori.cl/)" 
+website:
+  favicon: https://raw.githubusercontent.com/ODES-Chile/ODES-Chile.github.io/main/assets/img/Isotip_gradiente_azul.png
+css: style.css
+title-slide-attributes:
+    data-background-image: "img/imagen_fondo.png"
+    data-background-size: contain
+    data-background-opacity: ".6"
+---
+
+# Contexto {background-color="darkgreen"}
+
+## Las `actividades humanas`, principalmente a través de las emisiones de gases de efecto invernadero, han causado `inequívocamente` el `calentamiento global` (IPCC, AR6, 2023) {.center background-color="orange"}
+
+## `Desde 1950` los eventos de `sequía` se han `intensificado` y han sido más `frecuentes` (IPCC, AR6, 2023) {.center background-color="ocean"}
+
+## A `2°C` de anomalía o más, se proyectan `sequías` `agrícolas` y `ecológicas` más `frecuentes` y/o `severas` en América del Sur (confianza media a alta) (IPCC, AR6, 2023) {.center background-color="lightblue"}
+
+## ¿Qué es la sequía? 
+
+> Cuando las condiciones `climáticas` cambian respecto a su situación `normal` provocando un `déficit` prolongado entre la `oferta` (precipitación) y la `demanda` de `agua` (temperatura)
+
+## {background-image="img/wmo_drought_español.png" background-size="contain"}
+
+## ¿Qué ha pasado en Chile? 
+
+![](img/fig_spei24_macrozonas.png)
+
+## Necesidades en Chile respecto al clima
+
+* Monitoreo de la situación climática (`ODES`)
+
+* Adaptación a la nueva realidad climática (`SatOri`)
+
+# Observatorio de Sequía para la Agricultura y Biodiversidad de Chile (ODES)
+
+## ODES: Proyecto ANID
+
+* Financiado por la Agencia Nacional de Investigación y Desarrollo (ANID).
+
+* Fondo de investigación estratégica en sequía. Proyecto FSEQ210022
+
+* Finalizó el año 2024
+
+* Página web [https://odes-chile.org](https://odes-chile.org)
+
+## {background-image="img/odes-chile_pagina_inicio.png" background-size="contain"}
+
+## ODES: monitoreo del clima y sequía {.smaller}
+
+-   Monitoreo del `clima` con frecuencia `mensual` desde 1981 hasta ahora, para `Chile continental`.
+-   Utiliza datos de reanálisis climático `ERA5-Land` y `MODIS` (Espectrorradiómetro de imágenes de media resolución) de vegetación.
+-   Variables:
+    -   Precipitación
+    -   Temperatura
+    -   Demanda Evaporativa de la Atmósfera (ET0)
+    -   Humedad de suelo
+    -   Contenido de agua equivalente de nieve
+    -   Estado de desarrollo de la vegetación
+    
+## ODES: indicadores de sequía
+
+`Indicadores de sequía`: Utilizan anomalías de variables climáticas agregadas en varios meses.
+
+Ventajas de los indicadores de sequía
+
+1.  Permiten comparación entre diferentes zonas climáticas (humedas, aridas, ...)
+2.  Permiten comparación entre diferentes estaciones del año.
+3.  Permiten analizar la sequía a corto y largo plazo (ej., mega sequía)
+4.  Se pueden categorizar de acuerdo a la ocurrencia del evento, de acuerdo a su comportamiento histórico.
+
+## ODES: Indicadores de sequía {.smaller}
+
+-   `Indicadores derivados en ODES:`
+    -   `SPI`: índice estandarizado de precipitación
+    -   `SPEI`: índice estandarizado de precipitación-Evapotranspiración
+    -   `EDDI`: índice de sequía de demanda evaporativa
+    -   `zcSM`: índice estandarizado de humedad de suelo
+    -   `zcNDVI`: índice estandarizado de vegetación
+    -   `SWEI`: índice estandarizado de contenido de agua equivalente de nieve
+    -   `zcNDI`: proxy de productividad de la vegetación 
+
+Todos calculado a agregaciones de 1, 3, 6, 12, 24 y 36 meses, excepto zcNDVI que está a 1,3 y 6 meses.
+
+## ODES: sequía corto plazo {.smaller}
+
+
+Sequía corto plazo, SPEI de 6 meses.
+
+::::: columns
+::: {.column width="50%"}
+![](img/SPEI6_mayo2023.png){width="70%"}
+:::
+
+::: {.column width="50%"}
+![](img/SPEI6_junio2023.png){width="70%"}
+:::
+:::::
+
+## ODES: sequía largo plazo {.smaller}
+
+Sequía largo plazo, SPEI de 36 meses.
+
+::::: columns
+::: {.column width="50%"}
+![](img/SPEI36_mayo2023.png){width="70%"}
+:::
+
+::: {.column width="50%"}
+![](img/SPEI36_junio2023.png){width="70%"}
+:::
+:::::
+
+## Categorias de sequía
+
+Calculada para cada unidad de acuerdo a su distribución temporal 1981-ahora.
+
+::::: columns
+::: {.column width="50%"}
+![](img/histograma_percentiles.jpg)
+:::
+
+::: {.column width="50%"}
+```{r}
+library(gt)
+library(tibble)
+palette <- c('#730000','#E60000','#FFAA00','#FFD37F','#FFFF00','#FFFFFF','#8CCDEF','#00BFFF','#1D90FF','#4169E1','#0000FF')
+labels <-  c("Sequía excepcional", "Sequía extrema", "Sequía severa", "Sequía moderada", "Anormalmente seco",'Normal',"Anormalmente humedo",'Moderadamente humedo','Severamente humedo','Extramademente humedo', 'Excepcionalmente humedo')
+
+data.frame(`Percentiles` = c('0-2','2-5','5-10','10-20','20-30','30-70','70-80','80-90','90-95','95-98','98-100'),
+                               retorno = c(">50","20-50","10-20","5-10","1,5-5","-","1,5-5","5-10","10-20","20-50",">50"),
+           niveles = labels) |> as_tibble() |> gt() |>  cols_align(
+    align = "center",
+    columns = everything()
+  ) |> cols_label(retorno = 'Retorno (años)') |> data_color(palette = palette,columns = 'niveles', method = 'factor',levels = labels)
+```
+:::
+:::::
+
+# Sistema Satelital para la Optimización de Riego (SatOri)
+
+
+# Thank you! {background-image="img/egu25_logo.svg" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Questions?**
+
+francisco.zambrano@umayor.cl
+
+# Referenes {background-image="img/egu25_logo.svg" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+::: {#refs}
+:::

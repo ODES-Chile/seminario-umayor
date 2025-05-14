@@ -1,0 +1,24 @@
+/*-- scss:rules --*/
+
+.reveal {
+  .slides {
+    .slide {
+      img+p.caption {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+
+#title-slide {
+  text-align: center;
+
+  .quarto-title-authors {
+    justify-content: center;
+  
+    .quarto-title-author { // optional, test it for yourself
+      width: 100%;
+      font-size: 25px;
+    }
+  }
+}
