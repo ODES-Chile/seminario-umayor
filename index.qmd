@@ -30,37 +30,40 @@ title-slide-attributes:
 
 ## A `2°C` de anomalía o más, se proyectan `sequías` `agrícolas` y `ecológicas` más `frecuentes` y/o `severas` en América del Sur (confianza media a alta) (IPCC, AR6, 2023) {.center background-color="lightblue"}
 
-## ¿Qué es la sequía? 
+## ¿Qué es la sequía? {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 > Cuando las condiciones `climáticas` cambian respecto a su situación `normal` provocando un `déficit` prolongado entre la `oferta` (precipitación) y la `demanda` de `agua` (temperatura)
 
 ## {background-image="img/wmo_drought_español.png" background-size="contain"}
 
-## ¿Qué ha pasado en Chile? 
+## ¿Qué ha pasado en Chile? {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 ![](img/fig_spei24_macrozonas.png)
 
-## Necesidades en Chile respecto al clima
+## Necesidades en Chile respecto al clima {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 * Monitoreo de la situación climática (`ODES`)
 
 * Adaptación a la nueva realidad climática (`SatOri`)
 
+
 # I. Observatorio de Sequía para la Agricultura y Biodiversidad de Chile (ODES)
 
-## ODES: Proyecto ANID
+## ODES: Proyecto ANID {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 * Financiado por la Agencia Nacional de Investigación y Desarrollo (ANID).
 
 * Fondo de investigación estratégica en sequía. Proyecto FSEQ210022
 
-* Finalizó el año 2024
+* Finalizó el año 2023.
 
 * Página web [https://odes-chile.org](https://odes-chile.org)
 
+![](img/esquema_odes.png){fig-align='center'}
+
 ## {background-image="img/odes-chile_pagina_inicio.png" background-size="contain"}
 
-## ODES: monitoreo del clima y sequía {.smaller}
+## ODES: monitoreo del clima y sequía {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 -   Monitoreo del `clima` con frecuencia `mensual` desde 1981 hasta ahora, para `Chile continental`.
 -   Utiliza datos de reanálisis climático `ERA5-Land` y `MODIS` (Espectrorradiómetro de imágenes de media resolución) de vegetación.
@@ -72,7 +75,7 @@ title-slide-attributes:
     -   Contenido de agua equivalente de nieve
     -   Estado de desarrollo de la vegetación
     
-## ODES: indicadores de sequía
+## ODES: indicadores de sequía {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 `Indicadores de sequía`: Utilizan anomalías de variables climáticas agregadas en varios meses.
 
@@ -83,7 +86,7 @@ Ventajas de los indicadores de sequía
 3.  Permiten analizar la sequía a corto y largo plazo (ej., mega sequía)
 4.  Se pueden categorizar de acuerdo a la ocurrencia del evento, de acuerdo a su comportamiento histórico.
 
-## ODES: Indicadores de sequía {.smaller}
+## ODES: Indicadores de sequía {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 -   `Indicadores derivados en ODES:`
     -   `SPI`: índice estandarizado de precipitación
@@ -96,7 +99,7 @@ Ventajas de los indicadores de sequía
 
 Todos calculado a agregaciones de 1, 3, 6, 12, 24 y 36 meses, excepto zcNDVI que está a 1,3 y 6 meses.
 
-## ODES: sequía corto plazo {.smaller}
+## ODES: sequía corto plazo {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 
 Sequía corto plazo, SPEI de 6 meses.
@@ -111,7 +114,7 @@ Sequía corto plazo, SPEI de 6 meses.
 :::
 :::::
 
-## ODES: sequía largo plazo {.smaller}
+## ODES: sequía largo plazo {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 Sequía largo plazo, SPEI de 36 meses.
 
@@ -125,7 +128,7 @@ Sequía largo plazo, SPEI de 36 meses.
 :::
 :::::
 
-## Categorias de sequía
+## Categorias de sequía {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 Calculada para cada unidad de acuerdo a su distribución temporal 1981-ahora.
 
@@ -153,7 +156,7 @@ data.frame(`Percentiles` = c('0-2','2-5','5-10','10-20','20-30','30-70','70-80',
 
 # ODES para evaluar impacto en uso de suelo {.smaller}
 
-## Dos trabajos presentados en EGU 2024 y 2025 {.smaller}
+## Dos trabajos presentados en EGU 2024 y 2025 {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 ::: {.columns}
 ::: {.column width=50%}
@@ -227,6 +230,20 @@ data.frame(`Percentiles` = c('0-2','2-5','5-10','10-20','20-30','30-70','70-80',
 
 # II. Sistema Satelital para la Optimización de Riego (SatOri)
 
+## SatOri: Proyecto ANID {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+
+* Financiado por la Agencia Nacional de Investigación y Desarrollo (ANID).
+
+* Fondo de investigación aplicada FONDEF I+D.
+
+* Finalizó el año 2024
+
+* Página web [https://s4tori.cl](https://s4tori.cl)
+
+![](img/esquema_odes.png){fig-align='center'}
+
+## {background-image="img/satori_pagina_inicio.png" background-size="contain"}
+
 ## Objetivo General {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 Desarrollar un **prototipo de servicio web** para la optimización del riego en cerezo (SatOri) que permita a los productores `ajustar los tiempos y volúmenes de riego`, basado en las relaciones en distintas longitudes de onda de datos públicos obtenidos de `satélites` con sensores `ópticos` y de `radar`; y ensayos de `riego deficitario controlado` (RDC).
@@ -275,7 +292,10 @@ Desarrollar un **prototipo de servicio web** para la optimización del riego en 
 
 ![](img/series_clima.png){fig-align='center'}
 
-## Modelos utilizados {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+## Modelos para estimación de estado hídrico {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+- `Variable respuesta:` Potencial hídrico xilemático ($\Psi_s$)
+- `Predictores:` Imagenes satelitales Sentinel-2 y datos meteorológicos.
 
 Se evaluaron tres algoritmos de machine learning:
 
@@ -427,7 +447,7 @@ Se evaluaron tres algoritmos de machine learning:
 
 francisco.zambrano@umayor.cl
 
-# Referencias {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+<!-- # Referencias {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
 
-::: {#refs}
-:::
+<!-- ::: {#refs} -->
+<!-- ::: -->
