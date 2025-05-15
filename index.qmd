@@ -1,7 +1,7 @@
 ---
-title: "![](img/egu25_logo.svg){width=300}"
-subtitle: "Uso eficiente del agua: de alertas de sequía a riegos de precisión mediante teledetección"
-author: Dr. Francisco Zambrano
+title: "Uso eficiente del agua:"
+subtitle: "De alertas de sequía a riegos de precisión mediante teledetección"
+author: <br><br>Dr. Francisco Zambrano
 width: 1280
 height: 720
 bibliography: references.bib
@@ -9,7 +9,6 @@ format:
     revealjs:
       slide-number: true
       transition: fade
-      title: "![Seminario-UMayor](img/HEMERA_UM_color.png){width=300}"
       background-transition: fade
       theme: [default, custom.scss]
       logo: img/HEMERA_UM_color.png
@@ -47,7 +46,7 @@ title-slide-attributes:
 
 * Adaptación a la nueva realidad climática (`SatOri`)
 
-# Observatorio de Sequía para la Agricultura y Biodiversidad de Chile (ODES)
+# I. Observatorio de Sequía para la Agricultura y Biodiversidad de Chile (ODES)
 
 ## ODES: Proyecto ANID
 
@@ -152,16 +151,283 @@ data.frame(`Percentiles` = c('0-2','2-5','5-10','10-20','20-30','30-70','70-80',
 :::
 :::::
 
-# Sistema Satelital para la Optimización de Riego (SatOri)
+# ODES para evaluar impacto en uso de suelo {.smaller}
+
+## Dos trabajos presentados en EGU 2024 y 2025 {.smaller}
+
+::: {.columns}
+::: {.column width=50%}
+
+![](img/egu2024_abstract_captura.png){fig-align='center'}
+:::
+::: {.column width=50%}
+![](img/egu_abstract_captura.png){fig-align='center'}
+:::
+:::
+
+## Área de estudio {.smaller background-image="figs/mapa_area_estudio_final.png" background-position="95% 50%" background-size="contain" layout="true"}
+
+::: {.columns}
+::: {.column width=50%}
+* Chile continental dividido en siete ecoregiones
+* `Ecoregiones:` 
+  - Desierto de atacama, 
+  - Puna seca de los Andes centrales, 
+  - Estepa andina meridional, 
+  - [**Matorral chileno**]{style="color:red;"}, 
+  - [**Bosques templados valdivianos**]{style="color:red;"}, 
+  - Bosques subpolares magallánicos y
+  - [**Stepa patagónica**]{style="color:red;"} 
+
+:::
+
+::: {.column width=50%}
+:::
+:::
 
 
-# Thank you! {background-image="img/egu25_logo.svg" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+## Métodos {.smaller background-image="img/diagrama_egu2025.png" background-position="95% 50%" background-size="contain" layout="true"}
 
-**Questions?**
+
+## Tendencias en índices de sequía {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+- Tendencias positivas de EDDI (demanda atmosférica) en todas las ecorregiones.
+- Disminución de SPI y SSI (oferta hídrica) en ecorregiones de Matorral, Estepa y Bosque Valdiviano.
+
+![](figs/trend_macrozone_drought_indices.png){fig-align='center'}
+
+## Tendencias en el cambio de suelo {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+::: {.columns}
+::: {.column width=20%}
+- Matorrales y boques expandiendo.
+- Sabana disminuyendo.
+
+:::
+::: {.column width=80%}
+![](figs/fig_table_var_landcover_ecoregions.png){fig-align='center'}
+:::
+:::
+
+## Impacto de la sequía en la productividad de la vegetación {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+![](figs/mapa_cor_r_indices_zcNDVI6.png){fig-align='center'}
+
+## Modelos de RF para tendencia en el uso de suelo {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+- Los modelos para matorrales y cultivos explican en mayor grado la varianza.
+
+![](figs/comparison_r-squared_between_scales_of_drought_indices.png){fig-align='center'}
+
+## Drivers en cambio de uso de suelo {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+- `SETI` y  `SPEI` de `corto plazo` son las variables más impotantantes para explicar las tendencias en `matorrales`, `pastizales`, y `sabana`.
+- `Incendios` explican cambios en el área cultivada.
+- `Luces nocturnas` están asociadas a las tendencias en `suelo desnudo`.
+
+# II. Sistema Satelital para la Optimización de Riego (SatOri)
+
+## Objetivo General {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+Desarrollar un **prototipo de servicio web** para la optimización del riego en cerezo (SatOri) que permita a los productores `ajustar los tiempos y volúmenes de riego`, basado en las relaciones en distintas longitudes de onda de datos públicos obtenidos de `satélites` con sensores `ópticos` y de `radar`; y ensayos de `riego deficitario controlado` (RDC).
+
+## Idea del proyecto. {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+![](img/metodo3.png)
+
+## Área de Estudio {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+![](img/area_de_estudio.png){fig-align='center'}
+
+## Mediciones {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+::: {.columns}
+::: {.column width=50%}
+**Parámetros Fisiológicos**   
+
+* Potencial Hídrico Xilemático ($\Psi_s$)  
+* Fluorescencia  
+* Potencial de turgor  
+* Índice de Área Foliar  
+* Curva Presión Volumen  
+
+**Variables meteorológicas**
+
+* Temperatura  
+* Humedad relativa  
+* Déficit de Presion de Vapor (DPV)  
+* Evapotranspiración de referencia (ET0)  
+:::
+::: {.column width=50%}
+**Variables Satelitales (Sentinel-2)**
+
+* Indices de vegetación en la región VNIR/SWIR (16 índices)
+* Parámetros biofísicos:
+  + Índice de Área Foliar
+  + Contenido de clorofila en la hoja
+  + fAPAR
+  + Fracción de Cubierta Vegetal
+  + Contenido de Agua en la Canopia
+:::
+:::
+
+## Clima {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+![](img/series_clima.png){fig-align='center'}
+
+## Modelos utilizados {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+Se evaluaron tres algoritmos de machine learning:
+
+- Extreme Gradient Boosting (XGBoost; Chen y Guestrin (2016))
+- Random Forest(RF; Tin Kam Ho (1995))
+- Support vector Machine (SVM; Cortes y Vapnik (1995))
+
+# Resultados 
+
+## Uso de Agua {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Lamina de Agua Acumulada**
+
+![](img/riego_lamina.png)
+
+## Uso de Agua {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Volumen de Agua Total Aplicado**
+
+![](img/tabla_volumen_agua.png)
+
+<!-- ## Curva Presión-Volumen {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- ![](img/tlp.png) -->
+
+<!-- ## Curva Presión-Volumen {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- ![](img/tlp_la_esperanza_T0_1.png) -->
+
+<!-- ## Curva Presión-Volumen {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- ![](img/tlp_sitios.png) -->
+
+
+## Parámetros Fisiológicos {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Potencial Hídrico Xilemático ($\Psi_s$)**
+
+![](img/potencial_dia.png)
+
+## Parámetros Fisiológicos {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Fluorescencia ($\Phi_{P0}$)**
+
+![](img/fluorescencia.png)
+
+## Parámetros Fisiológicos {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Índice de Área Foliar (LAI)**
+
+![](img/lai.png)
+
+## Producción y Calidad {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Rendimiento (ton/ha)**
+
+![](img/rendimiento.png){fig-align='center'}
+
+## Producción y Calidad {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Calibre (mm)**
+
+![](img/calibre.png){fig-align='center'}
+
+<!-- ## Metabolómica {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- **Perfil Metabolómico** -->
+
+<!-- ![](img/Heatmap_RC_24.png) -->
+
+<!-- ## Metabolómica {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- **Análisis de rutas metabólicas** -->
+
+<!-- ![](img/via_metabol_t0vst3_rc.png){fig-align='center'} -->
+
+<!-- ## Metabolómica {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- **Modelado de rendimiento basado en perfil metabolómico** -->
+
+<!-- ![](img/rendimiento_metabolitos.png) -->
+
+<!-- ## Metabolómica {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- **Modelado de rendimiento basado en perfil metabolómico** -->
+
+<!-- Metabolítos más importantes  -->
+
+<!-- ![](img/importancia_metabolitos.png){width=50% fig-align="center"} -->
+
+<!-- ## Metabolómica {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- **Modelado de calibre  basado en perfil metabolómico** -->
+
+<!-- ![](img/calibre_metabolitos.png){fig-align='center'} -->
+
+<!-- ## Metabolómica {.smaller background-image="img/logo_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"} -->
+
+<!-- **Modelado de calibre  basado en perfil metabolómico** -->
+
+<!-- Metabolítos más importantes  -->
+
+<!-- ![](img/importancia_metabolitos_calibre.png){fig-align='center'} -->
+
+
+## Modelo Estimación $\Psi_s$ {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Predicho vs observado**
+
+![](img/pred_vs_obser_models.png){fig-align='center'} 
+ 
+## Modelo Estimación $\Psi_s$ {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**Importancia de las variables**
+
+![](img/var_importance.png){fig-align='center'}
+
+## Modelo Estimación $\Psi_s$ {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**$\Psi_s$ estimado por el modelo en La Esperanza**
+
+![](img/la_esperanza_swp_estimado_max_cov.png){fig-align='center'}
+
+## Modelo Estimación $\Psi_s$ {.smaller background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**$\Psi_s$ estimado por el modelo en Rio Claro**
+
+![](img/rio_claro_swp_estimado_max_cov.png){fig-align='center'}
+
+## Web ![](img/logo_satori.png){width=10%}{.small}
+
+::: {.columns}
+::: {.column width=30%}
+[s4tori.cl](https://s4tori.cl)
+
+[Aplicación de riego](https://s4tori.cl/app/)
+
+[Informe interactivo](https://s4tori.cl/informe/)
+
+:::
+::: {.column width=70%}
+![](img/plataforma.png){fig-align='center'}
+:::
+:::
+
+# Gracias! {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+
+**¿Preguntas?**
 
 francisco.zambrano@umayor.cl
 
-# Referenes {background-image="img/egu25_logo.svg" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
+# Referencias {background-image="img/Logo_odes_satori.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true"}
 
 ::: {#refs}
 :::
